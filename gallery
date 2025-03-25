@@ -10,92 +10,44 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-            scroll-behavior: smooth;
+            font-family: Arial, sans-serif;
         }
 
-        /* Background Gradient */
-        body {
-            background: linear-gradient(135deg, #1e3c72, #2a5298, #537895);
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-        }
-
-        /* Navbar dengan Efek Glassmorphism */
+        /* Navbar */
         .navbar {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(15px);
+            background-color: #007BFF;
             padding: 15px;
-            border-radius: 50px;
-            margin-top: 30px;
-            display: inline-block;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            text-align: center;
         }
 
         .navbar a {
             color: white;
             text-decoration: none;
-            margin: 0 20px;
+            margin: 0 15px;
             font-size: 18px;
-            font-weight: 600;
-            transition: all 0.3s ease;
+            font-weight: bold;
+            transition: 0.3s;
         }
 
         .navbar a:hover {
             color: #FFD700;
-            transform: translateY(-3px);
-            text-shadow: 0 0 8px #FFD700;
         }
 
-        /* Kontainer */
+        /* Kontainer utama */
         .container {
             text-align: center;
-            margin-top: 50px;
-            max-width: 800px;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(20px);
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-            animation: fadeInUp 1s ease-out;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            padding: 50px 20px;
         }
 
         h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            background: linear-gradient(90deg, #FFD700, #FFF);
-            background-clip: text;
-            color: transparent;
-            animation: glow 1.5s infinite alternate;
-        }
-
-        @keyframes glow {
-            from {
-                text-shadow: 0 0 8px #FFD700;
-            }
-            to {
-                text-shadow: 0 0 20px #FFF;
-            }
+            color: #333;
+            margin-bottom: 15px;
         }
 
         p {
-            color: #f0f0f0;
-            font-size: 1.2rem;
-            margin-bottom: 40px;
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 20px;
         }
 
         /* Galeri */
@@ -103,20 +55,20 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
+            gap: 15px;
         }
 
         .gallery img {
             width: 200px;
             height: auto;
-            border-radius: 20px;
-            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .gallery img:hover {
             transform: scale(1.1);
-            box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.6);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
         }
     </style>
 </head>
