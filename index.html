@@ -23,6 +23,7 @@
             align-items: center;
             min-height: 100vh;
             justify-content: center;
+            padding: 20px;
         }
 
         /* Navbar dengan Efek Glassmorphism */
@@ -38,14 +39,8 @@
         }
 
         @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(-40px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .navbar a {
@@ -76,14 +71,8 @@
         }
 
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         h1 {
@@ -96,31 +85,45 @@
         }
 
         @keyframes glow {
-            from {
-                text-shadow: 0 0 8px #FFD700;
-            }
-            to {
-                text-shadow: 0 0 20px #FFF;
-            }
+            from { text-shadow: 0 0 8px #FFD700; }
+            to { text-shadow: 0 0 20px #FFF; }
         }
 
         p {
             color: #f0f0f0;
             font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        /* Tombol Interaktif */
+        .btn-sapa {
+            padding: 12px 25px;
+            font-size: 16px;
+            background-color: #FFD700;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            color: #2a2a2a;
+        }
+
+        .btn-sapa:hover {
+            background-color: #fff;
+            box-shadow: 0 0 10px #FFD700, 0 0 20px #fff;
+        }
+
+        #hasilSapa {
+            margin-top: 15px;
+            font-size: 1.1rem;
+            color: #fffacd;
         }
 
         /* Responsive Desain */
         @media (max-width: 600px) {
-            .navbar a {
-                margin: 0 10px;
-                font-size: 16px;
-            }
-            h1 {
-                font-size: 2.5rem;
-            }
-            p {
-                font-size: 1rem;
-            }
+            .navbar a { margin: 0 10px; font-size: 16px; }
+            h1 { font-size: 2.5rem; }
+            p, #hasilSapa { font-size: 1rem; }
         }
     </style>
 </head>
@@ -138,7 +141,13 @@
     <div class="container">
         <h1>Selamat Datang di Website Saya!</h1>
         <p>Salam Kenal, Nama Saya <strong>Muhammad Luhung Aradhana</strong></p>
+
+        <!-- Tombol Interaktif -->
+        <button id="sapaButton" class="btn-sapa">Silahkan klik</button>
+        <p id="hasilSapa"></p>
     </div>
 
+    <!-- File JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
